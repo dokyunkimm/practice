@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+/* common */
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul, ol, li{list-style: none;}
+a{text-decoration: none; color: #000;}
+
+.kwqInr{margin: 0 auto; max-width: 1400px; width: calc(100% - 80px);}
+.kwqSctTtl{font-size: 48px; line-height: 1.3; color: #000;}
+
+
+body{font-family: 'Pretendard', sans-serif;}
+
+/* header */
+.hdrUp .kwqHdr{transform: translateY(-100%);}
+.hdrDwn .kwqHdr{transform: translateY(0);}
+
+.kwqHdr{z-index: 100; position: fixed; top: 0; left: 0; width: 100%; height: 90px; transition: transform 0.5s;}
+.kwqHdr .kwqInr{display: flex; align-items: center; height: 100%;}
+.kwqHdr .kwqLgo{width: 100px;}
+.kwqHdr .kwqLgo > a{position: relative; display: flex; align-items: center; justify-content: center; width: 100%;}
+.kwqHdr .kwqLgo > a > img{position: absolute; width: 100%;}
+.kwqHdr .kwqLgo > a > img.kwqLgoBlk{opacity: 0;}
+
+.kwqHdr .kwqNav{margin-left: auto;}
+.kwqHdr .kwqNav > ul{display: flex; align-items: center;}
+.kwqHdr .kwqNav > ul > li{}
+.kwqHdr .kwqNav > ul > li > a{display: inline-flex; align-items: center; justify-content: center; padding: 0 60px; font-size: 20px; font-weight: 600; color: #fff;}
+
+.kwqHdr .kwqShr{}
+.kwqHdr .kwqShr > a{color: #fff;}
+
+.kwqHdr:hover{background-color: #fff;}
+.kwqHdr:hover .kwqLgo > a > img.kwqLgoWht{opacity: 0;}
+.kwqHdr:hover .kwqLgo > a > img.kwqLgoBlk{opacity: 1;}
+.kwqHdr:hover .kwqNav > ul > li > a{color: #000;}
+
+.kwqHdr.fxd{background-color: #fff;}
+.kwqHdr.fxd .kwqLgo > a > img.kwqLgoWht{opacity: 0;}
+.kwqHdr.fxd .kwqLgo > a > img.kwqLgoBlk{opacity: 1;}
+.kwqHdr.fxd .kwqNav > ul > li > a{color: #000;}
+.kwqHdr.fxd .kwqShr > a{color: #000;}
+
+/* visual */
+.kwqVsl{position: relative; width: 100%; height: 100vh; background-image: url(https://www.153logistics.com/_File/popBanner//file_1679893344_0.jpg);}
+.kwqVsl .kwqInr{padding-top: 90px; display: flex; align-items: center; height: 100%;}
+.kwqVsl .kwqVslTtlBox{}
+.kwqVsl .kwqVslTtlBox > strong{font-size: 56px; font-weight: 700; color: #fff; line-height: 1.3;}
+.kwqVsl .kwqMseScl{z-index: 5; position: absolute; left: 50%; bottom: 60px; transform: translateX(-50%); display: flex; align-items: center; flex-direction: column;}
+.kwqVsl .kwqMseScl span{font-size: 14px; line-height: 21px; font-weight: 400; color: #fff;}
+.kwqVsl .kwqMseScl .kwqScrDwnIcn{position: relative; margin-top: 10px; display: inline-block; width: 20px; height: 30px; border: 2px solid #fff; border-radius: 50px;}
+.kwqVsl .kwqMseScl .kwqScrDwnIcn::before{content: ''; position: absolute; left: 50%; transform: translateX(-50%); display: inline-block; width: 4px; height: 4px; border-radius: 50%; background-color: #fff; animation: scroll 2s infinite;}
+
+@keyframes scroll {
+    0% { transform:translate(-50%, 0); opacity:0; }
+    40% { opacity:1; }
+    80% { transform:translate(-50%, 20px); opacity:0; }
+    100% { opacity:0; }
+}
+
+/* 컨텐츠 */
+
+/* 섹션 01 */
+.kwqSrvSct{padding-top: 240px;}
+.kwqScrCntBox{position: relative; margin-top: 120px; width: 100%;}
+.kwqScrCntBox > div{position: relative; width: 100%; height: 100vh; position: sticky; top: 160px; overflow: hidden;}
+.kwqInfoWrp{}
+.kwqInfoWrp .kwqInfoBox{position: absolute; opacity: 0;}
+.kwqInfoWrp .kwqInfoBox.active{opacity: 1;}
+.kwqInfoWrp .kwqInfoBox .kwqEngTtl{margin-bottom: 60px; display: block; font-size: 17px; font-weight: 700; color: #1947ba; text-transform: uppercase;}
+.kwqInfoWrp .kwqInfoBox .kwqInfoTxt{font-size: 23px; margin-top: 15px; line-height: 1.5; color: #000;}
+.kwqInfoWrp .kwqInfoBox .kwqMreBtn{margin-top: 100px; font-size: 17px; font-weight: 700; position: relative; display: inline-block; padding-bottom: 12px; border-bottom: 2px solid #000;}
+
+.kwqSldBox{width: 100%;}
+.kwqSldBox .kwqSldCnt{position: absolute; bottom: 20%; display: flex; align-items: center;}
+.kwqSldBox .kwqSldCnt .kwqImgBox{width: 35%; margin-right: 3%;}
+.kwqSldBox .kwqSldCnt .kwqImgBox:last-child{margin-right: 0;}
+.kwqSldBox .kwqSldCnt .kwqImgBox > img{max-width: 100%; overflow: hidden; border-radius: 300px;}
+
+.sec03{background-color: rgb(255, 255, 255);}
+.sec03 > div{position: sticky; top: 0;}
+.inner{max-width: 1200px; margin: 0 auto; width: 100%;}
+.txtWrp{}
+.txtWrp h2{font-size: 35px; margin-bottom: 50px;}
+.txtWrp p{font-size: 20px; margin-bottom: 10px;}
+
+.imgWrp{position: relative; height: 700px;}
+.imgWrp > img{position: absolute; }
+
+.kwqSct04{position: relative;}
+.kwqSct04 > div{position: relative; overflow: hidden; position: sticky; top: 0;}
+.kwqSct04 .kwqBxsSld{ display: flex;}
+.kwqSct04 .kwqBxsSld > div{display: flex; align-items: center; justify-content: center; max-width: 100%; font-size: 20px;}
+.kwqBxsSldBg{z-index: -1; position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+
